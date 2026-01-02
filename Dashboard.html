@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="static/dashboard.css">
+    <link rel="stylesheet" href="static/Dashboard.css">
     <title>LMS Dashboard</title>
 </head>
 <body>
@@ -21,4 +21,34 @@
       <div class="section-card" onclick="openCard('courses')">Courses</div>
       <div class="section-card" onclick="openCard('timetable')">Timetable</div>
       <div class="section-card" onclick="openCard('activity')">Activity</div>
+    </div>
+<div class="popup-card" id="courses">
+      <h3>Courses</h3>
+
+      <div class="course-card">
+        <h4>Programming Fundamentals</h4>
+        <p>Instructor: Nauman Riaz</p>
+      </div>
+      <div class="course-card">
+        <h4>Applied Physics</h4>
+        <p>Instructor: Muhammad Inam Ul Haq</p>
+      </div>
+      <div class="course-card">
+        <h4>Calculus and Analytical Geometry</h4>
+        <p>Instructor: Muhammad Naveel Riaz Dar</p>
+      </div>
+      <div class="course-card">
+        <h4>Application of ICT</h4>
+        <p>Instructor: Naveed Abbas</p>
+      </div>
+      <div class="course-card">
+        <h4>Functional English</h4>
+        <p>Instructor: Hina Nawaz</p>
+      </div>
+      <div class="course-card">
+        <h4>Ideology & Constitution of Pakistan</h4>
+        <p>Instructor: Emaan Najwa</p>
+      </div>
+
+      <button class="close-btn" onclick="closeCard('courses')">Close</button>
     </div>
