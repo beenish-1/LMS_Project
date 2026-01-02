@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/dashboard.css">
+    <title>LMS Dashboard</title>
+</head>
+<body>
+
+<div class="page">
+  <div class="dashboard-card">
+
+    <div class="profile-header">
+      <div class="avatar"></div>
+      <div class="user-info">
+        <div class="user-name">{{ user.name }}</div>
+        <div class="user-email">{{ user.email }}</div>
+      </div>
+    </div>
+
+    <div class="section-grid">
+      <div class="section-card" onclick="openCard('courses')">Courses</div>
+      <div class="section-card" onclick="openCard('timetable')">Timetable</div>
+      <div class="section-card" onclick="openCard('activity')">Activity</div>
+    </div>
