@@ -52,3 +52,38 @@
 
       <button class="close-btn" onclick="closeCard('courses')">Close</button>
     </div>
+ <div class="popup-card" id="timetable">
+      <h3>Timetable</h3>
+      <table>
+        <tr><th>Course Code</th><th>Section</th><th>Course title</th><th>Cr. Hours</th><th>Lecture Day</th><th>Lecture Time</th><th>Room</th></tr> 
+        <tr><td>CS-102 </td><td>BA </td><td>PF </td><td>4 </td><td>Monday</td><td>1:30 to 3:00</td><td>A101</td></tr> 
+        <tr><td>GE-105 </td><td>VA </td><td>FE </td><td>3 </td><td>Tuesday</td><td>3:00 to 4:00</td><td>B103</td></tr> 
+        <tr><td>GE-202 </td><td>VA </td><td>ICP </td><td>2 </td><td>Wednesday</td><td>6:00 to 7:30</td><td>B001</td></tr> 
+        <tr><td>GE-203 </td><td>VA </td><td>AOICT </td><td>3 </td><td>Thursday</td><td>3:00 to 4:00</td><td>B101</td></tr> 
+        <tr><td>MATH-107 </td><td>WA </td><td>CAG </td><td>3 </td><td>Friday</td><td>6:00 to 7:30</td><td>B201</td></tr> 
+        <tr><td>PHY-117 </td><td>VA </td><td>AP </td><td>3 </td><td>Saturday</td><td>3:00 to 4:00</td><td>S007</td></tr>
+      </table>
+      <button class="close-btn" onclick="closeCard('timetable')">Close</button>
+    </div>
+
+    <div class="popup-card" id="activity">
+      <h3>Activity</h3>
+      <button onclick="alert('Assignment is not available at a time.')">Upload Assignment</button>
+      <button onclick="alert('Quiz not available at a time.')">Create Quiz</button>
+      <button onclick="alert('Your attendance is not available at a time.')">Attendance</button>
+      <button class="close-btn" onclick="closeCard('activity')">Close</button>
+    </div>
+
+  </div>
+</div>
+<script>
+function openCard(id){
+  document.querySelectorAll('.popup-card').forEach(c => c.style.display='none');
+  document.getElementById(id).style.display = 'block';
+}
+function closeCard(id){
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+</body>
+</html>
