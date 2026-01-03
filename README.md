@@ -12,7 +12,7 @@
 ---
 
 ##  Team Members
-**Section:** A  
+**Section:** BA  
 **Semester:** 1 (Evening)  
 **Subject:** Programming Fundamentals  
 
