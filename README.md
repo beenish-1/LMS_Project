@@ -94,7 +94,6 @@ cd <repository-folder>
 pip install flask
 
 # 4. Run the application
-python run.py
 
 5. Open the application in your browser
 Go to: http://127.0.0.1:5000/
