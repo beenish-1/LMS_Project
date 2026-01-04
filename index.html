@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>LMS Login</title>
+</head>
+<body>
+<div class="glass-box">
+    <h2 id="form-title">Login</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="flash {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <input type="hidden" name="action" id="action" value="login">
+        <input type="text" name="name" id="name-field" placeholder="Full Name" style="display:none;">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" id="submit-btn">Login</button>
+    </form>
+
+    <div id="toggle-buttons">
+        <button id="toggle-create" onclick="toggleForm()">Create Account</button>
+        <button id="toggle-cancel" onclick="toggleForm()" style="display:none;">Cancel</button>
+    </div>
+</div>
+
+<script>
+function toggleForm(){
+    const title = document.getElementById("form-title");
+    const nameField = document.getElementById("name-field");
+    const actionInput = document.getElementById("action");
+    const submitBtn = document.getElementById("submit-btn");
+    const createBtn = document.getElementById("toggle-create");
+    const cancelBtn = document.getElementById("toggle-cancel");
+
+    if(nameField.style.display=="none"){
+        nameField.style.display="block";
+        title.innerText="Create Account";
+        actionInput.value="create";
+        submitBtn.innerText="Create Account";
+        createBtn.style.display="none";
+        cancelBtn.style.display="inline-block";
+    } else {
+        nameField.style.display="none";
+        title.innerText="Login";
+        actionInput.value="login";
+        submitBtn.innerText="Login";
+        createBtn.style.display="inline-block";
+        cancelBtn.style.display="none";
+body {
+    margin:0;
+    height:100vh;
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #00002e, #0c1c46, #19365a);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+.page-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px; 
+    font-weight: 700;
+    text-shadow: 0 0 10px #2f0241, 0 0 20px #1f022c; 
+}
+.glass-box {
+    width: 400px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 25px #2c0253;
+    text-align: center;
+    color: #ffffffd8;
+    position: relative;
+}
+input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border:none;
+    background: rgba(255,255,255,0.1);
+    color:#ffffff4d;
+}
+button {
+    margin: 5px;
+    padding: 12px 25px;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+    font-weight:bold;
+    background: linear-gradient(45deg,#3c0153,#41055a);
+    color:white;
+    transition: 0.3s;
+}
+button:hover {
+    box-shadow: 0 0 10px #2f0144, 0 0 25px #52186b;
+}
+#toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+#toggle-buttons button {
+    padding: 8px 20px;
+}
+.flash {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 8px;
+}
+.flash.error { background: rgba(255,0,0,0.4); }
+.flash.success { background: rgba(0,255,0,0.3); }
+    }
+}
+</script>
+</body>
+</html>
