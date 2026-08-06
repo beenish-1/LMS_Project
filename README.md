@@ -11,18 +11,6 @@
 > This LMS is designed for students of Section A. It supports account creation, login, and interactive dashboard sections for managing assignments, quizzes, attendance, timetable, and courses.
 ---
 
-##  Team Members
-**Section:** BA  
-**Semester:** 1 (Evening)  
-**Subject:** Programming Fundamentals  
-
-| Member Name        | Roll Number | Role     | Contribution                                           |
-|-------------------|------------|---------|-------------------------------------------------------|
-| **Bilal**    | 161        | Frontend | Login & Auth UI (`index.html`)                        |
-| **Beenish Majeed**    | 058        | Frontend | Dashboard & Activities UI (`dashboard.html`)          |
-| **Saad Shah** | 121    | Backend  | Flask Logic & Session Management (`backend.py`, `backend2.py`) |
- 
----
 
 ## Project Overview
 
